@@ -96,7 +96,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={`https://www.fastassessoria.com.br/img/ckfinder/images/logo%203.png`}
+                  src={"https://www.fastassessoria.com.br/img/ckfinder/images/logo%203.png"}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -133,8 +133,8 @@ const Sidebar = () => {
               Configurações
             </Typography>
             <Item
-              title="Gerenciar Usuários"
-              to="/Usuarios"
+              title="Gerenciar Clientes"
+              to="/Clientes"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -170,7 +170,7 @@ const Sidebar = () => {
             />
             <Item
               title="calendário"
-              to="/calendário"
+              to="/calendario"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

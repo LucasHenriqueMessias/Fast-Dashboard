@@ -31,14 +31,14 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/Contatos" element={<Team />} />
-              <Route path="/Usuarios" element={<Contacts />} />
+              <Route path="/Clientes" element={<Contacts />} />
               <Route path="/FluxoDeCaixa" element={<Invoices />} />
               <Route path="/form" element={<Form />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
               <Route path="/line" element={<Line />} />
               <Route path="/faq" element={<FAQ />} />
-              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/calendario" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
             </Routes>
           </main>
