@@ -1,6 +1,5 @@
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
-import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
@@ -12,8 +11,25 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
+
+
+  const [fluxo, setFluxo] = useState([])
+    useEffect(() => {
+      
+      //Get Data From Backend
+      axios.get(`http://localhost:3000/tab-fluxo-caixa/`)
+        .then((res) => setFluxo(res.data))
+        .catch(() => {
+          alert("Caixa não encontrado.");
+        }, [])
+    }, [])
+
+
+
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -180,12 +196,12 @@ const Dashboard = () => {
             p="15px"
           >
             <Typography color={colors.grey[100]} variant="h5" fontWeight="600">
-              Recent Transactions
+              Fluxo de Caixa Recente
             </Typography>
           </Box>
-          {mockTransactions.map((transaction, i) => (
+          {fluxo.map((transaction, i) => (
             <Box
-              key={`${transaction.txId}-${i}`}
+              key={`${transaction.id}-${i}`}
               display="flex"
               justifyContent="space-between"
               alignItems="center"
@@ -198,10 +214,10 @@ const Dashboard = () => {
                   variant="h5"
                   fontWeight="600"
                 >
-                  {transaction.txId}
+                  {transaction.banco_origem}
                 </Typography>
                 <Typography color={colors.grey[100]}>
-                  {transaction.user}
+                  {transaction.Categoria}
                 </Typography>
               </Box>
               <Box color={colors.grey[100]}>{transaction.date}</Box>
@@ -210,7 +226,7 @@ const Dashboard = () => {
                 p="5px 10px"
                 borderRadius="4px"
               >
-                ${transaction.cost}
+                R${transaction.valor_movimentacao}
               </Box>
             </Box>
           ))}

@@ -1,50 +1,47 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-import { mockDataInvoices } from "../../data/mockData";
 import Header from "../../components/Header";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Invoices = () => {
+  const [fluxo, setFluxo] = useState([])
+    useEffect(() => {
+      
+      //Get Data From Backend
+      axios.get(`http://localhost:3000/tab-fluxo-caixa/`)
+        .then((res) => setFluxo(res.data))
+        .catch(() => {
+          alert("Caixa não encontrado.");
+        }, [])
+    }, [])
+
+
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
-    { field: "id", headerName: "ID" },
-    {
-      field: "name",
-      headerName: "Name",
-      flex: 1,
-      cellClassName: "name-column--cell",
-    },
-    {
-      field: "phone",
-      headerName: "Phone Number",
-      flex: 1,
-    },
-    {
-      field: "email",
-      headerName: "Email",
-      flex: 1,
-    },
-    {
-      field: "cost",
-      headerName: "Cost",
-      flex: 1,
+    { field: "data", headerName: "Criação", flex: 1 },
+    { field: "data_ajustada", headerName: "ajuste", flex: 1 },
+    { field: "banco_origem", headerName: "Origem", flex: 1 },
+    { field: "Categoria", headerName: "Categoria", flex: 1 },
+    { field: "tipo", headerName: "tipo" , flex: 1},
+    { field: "valor_movimentacao", headerName: "valor", flex: 1, 
       renderCell: (params) => (
         <Typography color={colors.greenAccent[500]}>
-          ${params.row.cost}
+          R$ {params.row.valor_movimentacao}
         </Typography>
       ),
     },
-    {
-      field: "date",
-      headerName: "Date",
-      flex: 1,
-    },
+    { field: "descricao", headerName: "descrição" , flex: 1},
+    { field: "efetivado", headerName: "efetivado" , flex: 1},
+    { field: "vencimento_original", headerName: "vencimento", flex: 1 },
+    { field: "competencia", headerName: "competência" , flex: 1},
   ];
 
   return (
     <Box m="20px">
-      <Header title="INVOICES" subtitle="List of Invoice Balances" />
+      <Header title="Fluxo de Caixa" />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -72,9 +69,14 @@ const Invoices = () => {
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
           },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.grey[100]} !important`,
+          },
         }}
       >
-        <DataGrid checkboxSelection rows={mockDataInvoices} columns={columns} />
+        <DataGrid  editMode="cell" rows={fluxo} columns={columns}
+        components={{ Toolbar: GridToolbar }}
+        getRowId={(row) => row.id} />
       </Box>
     </Box>
   );

@@ -80,7 +80,7 @@ const Sidebar = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  FastAPI
+                  Fast Analytics
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -96,7 +96,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={"https://www.fastassessoria.com.br/img/ckfinder/images/logo%203.png"}
+                  src={"favicon.ico"}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -107,10 +107,10 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Fast Assessoria Contábil
+                  Fast Assessoria
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                Todos os direitos reservados © - FAST ASSESSORIA - 2024
+                Todos os direitos reservados © 2024
                 </Typography>
               </Box>
             </Box>
@@ -125,13 +125,13 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
+            {/* <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Configurações
-            </Typography>
+            </Typography> */}
             <Item
               title="Gerenciar Clientes"
               to="/Clientes"
@@ -154,13 +154,13 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
+            {/* <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Páginas
-            </Typography>
+            </Typography> */}
             <Item
               title="cadastro"
               to="/form"
@@ -183,13 +183,13 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
+            {/* <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
               Gráficos Dinâmicos
-            </Typography>
+            </Typography> */}
             <Item
               title="Barras"
               to="/bar"
