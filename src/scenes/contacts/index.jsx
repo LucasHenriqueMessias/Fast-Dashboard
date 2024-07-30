@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, InputBase, Typography } from "@mui/material";
+import { Box, Button, IconButton, InputBase, TextField, Typography } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
@@ -151,6 +151,7 @@ console.log(getCnpj)
           <div className="overlay" style={{
 
             background: "rgba(49,49,49,0.8)"
+            
           }}
           ></div>
           <div className="modal-content" style={{
@@ -160,7 +161,7 @@ console.log(getCnpj)
             transform: "translate(-50%, -50%)",
             lineHeight: 1.4,
             background: "#f1f1f1",
-            padding: "14px 18px",
+            padding: "120px 10px",
             borderRadius: "3px",
             maxWidth: "600px",
             minWidth: "300px",
@@ -184,6 +185,7 @@ console.log(getCnpj)
               backgroundColor={colors.primary[400]}
               borderRadius="3px"
               position="relative"
+              
             >
               <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Inserir CNPJ" onChange={event => { setCnpj(event.target.value)}}/>
               <IconButton type="button" sx={{ p: 1 }} onClick={() => {
@@ -197,8 +199,24 @@ console.log(getCnpj)
                 <SearchIcon />
                 
               </IconButton>
+
+              
             </Box>
-              <div>{cnpj.toString()}</div>
+            
+              <TextField id="outlined-helperText" label="CNPJ" defaultValue="Default Value" sx={{top: "20px", left:"10px"}}/>
+              <TextField id="outlined-helperText" label="Razão Social" defaultValue="Default Value" sx={{top: "20px", left:"20px"}}/>
+              <TextField id="outlined-helperText" label="Capital Inicial" defaultValue="Default Value" sx={{top: "20px", left:"30px"}}/>
+              <TextField id="outlined-helperText" label="Telefone 1" defaultValue="Default Value"sx={{top: "40px", left: "10px"}}/>
+              <TextField id="outlined-helperText" label="Telefone 2" defaultValue="Default Value" sx={{top: "40px", left:"20px"}}/>
+              <TextField id="outlined-helperText" label="Descrição CNAE" defaultValue="Default Value"sx={{top: "40px", left:"30px"}}/>
+              <TextField id="outlined-helperText" label="CNAE" defaultValue="Default Value" sx={{top: "60px", left:"10px"}}/>
+              <TextField id="outlined-helperText" label="Renda Bruta Atual" defaultValue="Default Value" sx={{top: "60px", left:"20px"}}/>
+              <TextField id="outlined-helperText" label="Renda Líquida Atual" defaultValue="Default Value" sx={{top: "60px", left: "30px"}}/>
+              <TextField id="outlined-helperText" label="Municipio" defaultValue="Default Value" sx={{top: "80px", left: "10px"}}/>
+              <TextField id="outlined-helperText" label="Bairro" defaultValue="Default Value" sx={{top: "80px", left:"20px"}}/>
+              <TextField id="outlined-helperText" label="Logradouro" defaultValue="Default Value" sx={{top: "80px", left:"30px"}}/>
+              <TextField id="outlined-helperText" label="UF" defaultValue="Default Value" sx={{top: "100px", left:"10px"}}/>
+              
           </div>
         </div>
 
