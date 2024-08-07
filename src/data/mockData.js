@@ -421,163 +421,163 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "japan",
+    id: "Líquido",
     color: tokens("dark").greenAccent[500],
     data: [
       {
-        x: "plane",
-        y: 101,
-      },
-      {
-        x: "helicopter",
-        y: 75,
-      },
-      {
-        x: "boat",
-        y: 36,
-      },
-      {
-        x: "train",
-        y: 216,
-      },
-      {
-        x: "subway",
-        y: 35,
-      },
-      {
-        x: "bus",
-        y: 236,
-      },
-      {
-        x: "car",
-        y: 88,
-      },
-      {
-        x: "moto",
-        y: 232,
-      },
-      {
-        x: "bicycle",
-        y: 281,
-      },
-      {
-        x: "horse",
-        y: 1,
-      },
-      {
-        x: "skateboard",
-        y: 35,
-      },
-      {
-        x: "others",
-        y: 14,
-      },
-    ],
-  },
-  {
-    id: "france",
-    color: tokens("dark").blueAccent[300],
-    data: [
-      {
-        x: "plane",
-        y: 212,
-      },
-      {
-        x: "helicopter",
-        y: 190,
-      },
-      {
-        x: "boat",
-        y: 270,
-      },
-      {
-        x: "train",
-        y: 9,
-      },
-      {
-        x: "subway",
-        y: 75,
-      },
-      {
-        x: "bus",
-        y: 175,
-      },
-      {
-        x: "car",
-        y: 33,
-      },
-      {
-        x: "moto",
-        y: 189,
-      },
-      {
-        x: "bicycle",
-        y: 97,
-      },
-      {
-        x: "horse",
-        y: 87,
-      },
-      {
-        x: "skateboard",
-        y: 299,
-      },
-      {
-        x: "others",
-        y: 251,
-      },
-    ],
-  },
-  {
-    id: "us",
-    color: tokens("dark").redAccent[200],
-    data: [
-      {
-        x: "plane",
+        x: "Janeiro",
         y: 191,
       },
       {
-        x: "helicopter",
+        x: "Fevereiro",
         y: 136,
       },
       {
-        x: "boat",
+        x: "Março",
         y: 91,
       },
       {
-        x: "train",
+        x: "Abril",
         y: 190,
       },
       {
-        x: "subway",
+        x: "Maio",
         y: 211,
       },
       {
-        x: "bus",
+        x: "Junho",
         y: 152,
       },
       {
-        x: "car",
+        x: "Julho",
         y: 189,
       },
       {
-        x: "moto",
+        x: "Agosto",
         y: 152,
       },
       {
-        x: "bicycle",
+        x: "Setembro",
         y: 8,
       },
       {
-        x: "horse",
+        x: "Outubro",
         y: 197,
       },
       {
-        x: "skateboard",
+        x: "Novembro",
         y: 107,
       },
       {
-        x: "others",
+        x: "Dezembro",
+        y: 170,
+      },
+    ],
+  },
+  {
+    id: "Bruto",
+    color: tokens("dark").blueAccent[300],
+    data: [
+      {
+        x: "Janeiro",
+        y: 191,
+      },
+      {
+        x: "Fevereiro",
+        y: 136,
+      },
+      {
+        x: "Março",
+        y: 91,
+      },
+      {
+        x: "Abril",
+        y: 190,
+      },
+      {
+        x: "Maio",
+        y: 211,
+      },
+      {
+        x: "Junho",
+        y: 152,
+      },
+      {
+        x: "Julho",
+        y: 189,
+      },
+      {
+        x: "Agosto",
+        y: 152,
+      },
+      {
+        x: "Setembro",
+        y: 8,
+      },
+      {
+        x: "Outubro",
+        y: 197,
+      },
+      {
+        x: "Novembro",
+        y: 107,
+      },
+      {
+        x: "Dezembro",
+        y: 170,
+      },
+    ],
+  },
+  {
+    id: "Projeção",
+    color: tokens("dark").redAccent[200],
+    data: [
+      {
+        x: "Janeiro",
+        y: 191,
+      },
+      {
+        x: "Fevereiro",
+        y: 136,
+      },
+      {
+        x: "Março",
+        y: 91,
+      },
+      {
+        x: "Abril",
+        y: 190,
+      },
+      {
+        x: "Maio",
+        y: 211,
+      },
+      {
+        x: "Junho",
+        y: 152,
+      },
+      {
+        x: "Julho",
+        y: 189,
+      },
+      {
+        x: "Agosto",
+        y: 152,
+      },
+      {
+        x: "Setembro",
+        y: 8,
+      },
+      {
+        x: "Outubro",
+        y: 197,
+      },
+      {
+        x: "Novembro",
+        y: 107,
+      },
+      {
+        x: "Dezembro",
         y: 170,
       },
     ],
