@@ -24,7 +24,6 @@ const Invoices = () => {
     }, [])
     const [modal, setModal] = useState(false)
     //remover 
-  const [cnpj] = useState(``);
   const [getCnpj, setCnpj] = useState(``);
 
   const theme = useTheme();

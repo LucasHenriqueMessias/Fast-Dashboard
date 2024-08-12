@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { Link, useTheme } from '@mui/material'; 
+import { useTheme } from '@mui/material'; 
 import { ColorModeContext } from "../../theme";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -20,7 +20,7 @@ import { ThemeProvider } from '@emotion/react';
 import { useContext } from 'react';
 
 const pages = [
- 'FluxodeCaixa','DRE', 'Clientes', 'Socios','Calendario','faq'
+ 'FluxodeCaixa','DRE', 'Clientes', 'Socios','Calendario','faq', 'entradaArquivos'
 ];
 const settings = ['Alterar Cliente', 'Desconectar'];
 const notifications=[
@@ -69,7 +69,7 @@ function Topbar() {
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
-            noWrap
+            
             component="a"
             href="/"
             sx={{
@@ -126,7 +126,7 @@ function Topbar() {
           </Box>
           <Typography
             variant="h5"
-            noWrap
+            
             component="a"
             href="/"
             sx={{
@@ -149,7 +149,7 @@ function Topbar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
                 variant="h6"
-            noWrap
+            
             component="a"href={`/${page}`}
               >
                 {page}
